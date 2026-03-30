@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ExhiBits — IEIA Magazine | Indian Exhibition Industry Association</title>
+  <meta name="description"
+    content="ExhiBits is the official e-magazine of IEIA (Indian Exhibition Industry Association) — your gateway to the latest news, trends, and insights from India's exhibition and MICE industry.">
+  <meta name="keywords"
+    content="IEIA, ExhiBits, Indian Exhibition Industry Association, MICE, Exhibitions India, Trade Shows, Magazine">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- ====== 3D CURSOR ====== -->
+  <div class="cursor-3d" id="cursor3D">
+    <div class="cursor-3d__scene">
+      <div class="cursor-3d__shape">
+        <div class="cursor-3d__face cursor-3d__face--1"></div>
+        <div class="cursor-3d__face cursor-3d__face--2"></div>
+        <div class="cursor-3d__face cursor-3d__face--3"></div>
+        <div class="cursor-3d__face cursor-3d__face--4"></div>
+        <div class="cursor-3d__face cursor-3d__face--5"></div>
+        <div class="cursor-3d__face cursor-3d__face--6"></div>
+        <div class="cursor-3d__face cursor-3d__face--7"></div>
+        <div class="cursor-3d__face cursor-3d__face--8"></div>
+      </div>
+    </div>
+    <div class="cursor-3d__glow"></div>
+    <div class="cursor-3d__trail" id="cursorTrail"></div>
+  </div>
+
+  <!-- ====== TOP BAR ====== -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <a href="mailto:info@ieia.in"><i class="fas fa-envelope"></i> info@ieia.in</a>
+        <a href="tel:+911141045481"><i class="fas fa-phone"></i> +91 11 41045481 / 83</a>
+      </div>
+      <div class="top-bar-right">
+        <a href="https://www.facebook.com/IEIASecretariat/" target="_blank" aria-label="Facebook"><i
+            class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/IEIA_sec" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/company/ieia/" target="_blank" aria-label="LinkedIn"><i
+            class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.youtube.com/@iaborede" target="_blank" aria-label="YouTube"><i
+            class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== NAVBAR ====== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="https://www.ieia.in/" class="navbar-logo" title="Go to IEIA Main Website">
+        <span class="logo-icon">IEIA</span>
+        <span class="logo-divider"></span>
+        <span class="logo-mag">Exhi<span>Bits</span></span>
+      </a>
+      <ul class="navbar-links" id="navLinks">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#updates">Latest News</a></li>
+        <li><a href="#featured">Current Issue</a></li>
+        <li><a href="#initiatives">Initiatives</a></li>
+        <li><a href="#partners">Partners</a></li>
+        <li><a href="https://www.ieia.in/" target="_blank" class="nav-cta"><i class="fas fa-external-link-alt"></i> IEIA
+            Main Site</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark/light mode">
+        <div class="toggle-track">
+          <span class="toggle-icon sun"><i class="fas fa-sun"></i></span>
+          <span class="toggle-icon moon"><i class="fas fa-moon"></i></span>
+          <span class="toggle-thumb"></span>
+        </div>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ====== HERO ====== -->
+  <section class="hero section-pad" id="home">
+    <div class="hero-bg-img"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-pattern"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          <span id="heroDate">March 2026 Edition</span>
+        </div>
+        <h1>India's Premier <span class="highlight">Exhibition</span> Industry Magazine</h1>
+        <p>Your definitive source for insights, trends, and breaking news from India's thriving MICE &amp; exhibitions
+          sector — published by IEIA.</p>
+        <div class="hero-buttons">
+          <a href="#featured" class="btn btn-primary">
+            <i class="fas fa-book-open"></i> Read Current Issue
+          </a>
+          <a href="#subscribe" class="btn btn-outline">
+            <i class="fas fa-bell"></i> Subscribe Free
+          </a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="magazine-preview">
+          <img src="assets/exhibits_cover.png" alt="ExhiBits Magazine Cover - Current Issue">
+          <span class="issue-badge" id="issueBadge">Latest Issue</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== MAGNETIC ARROW CTA ====== -->
+  <section class="magnetic-cta-section" id="register">
+    <div class="magnetic-cta-bg">
+      <div class="magnetic-particles" id="magneticParticles"></div>
+    </div>
+    <div class="container">
+      <div class="magnetic-cta-wrapper fade-in">
+        <div class="magnetic-cta-content">
+          <span class="section-label magnetic-label">Complimentary Registration</span>
+          <h2 class="section-title magnetic-title">Secure Your <span class="highlight-gradient">Delegate Pass</span></h2>
+          <p class="magnetic-subtitle">Join 400+ industry leaders at the expo. Registration is complimentary for IEIA members — your seat at India's premier exhibition summit awaits.</p>
+        </div>
+        <div class="magnetic-arrow-zone" id="magneticArrowZone">
+          <a href="https://www.ieia.in/front/registration_form" target="_blank" class="magnetic-arrow-btn" id="magneticArrowBtn" aria-label="Register now for free">
+            <span class="magnetic-arrow-ring magnetic-arrow-ring--outer"></span>
+            <span class="magnetic-arrow-ring magnetic-arrow-ring--mid"></span>
+            <span class="magnetic-arrow-ring magnetic-arrow-ring--inner"></span>
+            <span class="magnetic-arrow-core">
+              <svg class="magnetic-arrow-svg" id="magneticArrowSvg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 34L34 14M34 14H18M34 14V30" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="magnetic-arrow-glow"></span>
+          </a>
+          <span class="magnetic-arrow-label" id="magneticLabel">Register Free</span>
+          <div class="magnetic-trail" id="magneticTrail"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== TICKER ====== -->
+  <div class="ticker-bar">
+    <div class="ticker-track" id="tickerTrack">
+      <!-- Dynamically populated -->
+    </div>
+  </div>
+
+  <!-- ====== LATEST NEWS & UPDATES ====== -->
+  <section class="updates section-pad" id="updates">
+    <div class="container">
+      <div class="updates-header fade-in">
+        <div>
+          <span class="section-label">Latest Updates</span>
+          <h2 class="section-title">ExhiBits News Dashboard</h2>
+          <p class="section-subtitle">Stay informed with the latest developments shaping India's exhibition and MICE
+            industry.</p>
+        </div>
+        <a href="https://www.ieia.in/news-activities" target="_blank" class="btn btn-outline-dark">
+          View All News <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+      <div class="updates-grid" id="newsGrid">
+        <!-- Dynamically populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FEATURED ISSUE ====== -->
+  <section class="featured section-pad" id="featured">
+    <div class="container">
+      <div class="featured-inner">
+        <div class="featured-img-wrap fade-in">
+          <div class="featured-img">
+            <img src="assets/exhibition_news.png" alt="Featured Exhibition Event">
+          </div>
+        </div>
+        <div class="featured-details fade-in">
+          <span class="section-label">Current Issue</span>
+          <h2 class="section-title">ExhiBits — <span id="currentMonth">March</span> <span id="currentYear">2026</span>
+          </h2>
+          <p>This edition features comprehensive coverage of India's rapidly growing exhibition infrastructure, the
+            upcoming IEIA Open Seminar 2026, and exclusive insights from industry leaders shaping the MICE sector.</p>
+          <div class="featured-stats">
+            <div class="stat-item">
+              <div class="stat-num" id="statArticles">24</div>
+              <div class="stat-label">Articles</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num">400+</div>
+              <div class="stat-label">Members</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num">15+</div>
+              <div class="stat-label">Years Legacy</div>
+            </div>
+          </div>
+          <div class="hero-buttons">
+            <a href="https://www.ieia.in/" target="_blank" class="btn btn-primary">
+              <i class="fas fa-download"></i> Download Issue
+            </a>
+            <a href="https://www.ieia.in/news-activities" target="_blank" class="btn btn-outline">
+              <i class="fas fa-archive"></i> Past Issues
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== INITIATIVES ====== -->
+  <section class="initiatives section-pad" id="initiatives">
+    <div class="container">
+      <div class="fade-in">
+        <span class="section-label">IEIA Initiatives</span>
+        <h2 class="section-title">Driving the Exhibition Industry Forward</h2>
+        <p class="section-subtitle">IEIA leads transformative programs to empower the Indian exhibitions ecosystem.</p>
+      </div>
+      <div class="initiatives-grid" id="initiativesGrid">
+        <!-- Dynamically populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== PARTNERS ====== -->
+  <section class="partners section-pad" id="partners">
+    <div class="container">
+      <div class="partners-label fade-in">
+        <span class="section-label">Industry Affiliations</span>
+        <h2 class="section-title">Global MoU Partners</h2>
+      </div>
+      <div class="partners-track fade-in" id="partnersTrack">
+        <!-- Dynamically populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SUBSCRIBE ====== -->
+  <section class="subscribe section-pad" id="subscribe">
+    <div class="container fade-in">
+      <span class="section-label">Stay Connected</span>
+      <h2 class="section-title">Subscribe to ExhiBits E-Magazine</h2>
+      <p class="section-subtitle">Get the latest issue delivered straight to your inbox — free for all IEIA members.</p>
+      <form class="subscribe-box" id="subscribeForm">
+        <input type="email" id="subscribeEmail" placeholder="Enter your email address" required>
+        <button type="submit" class="btn">Subscribe <i class="fas fa-paper-plane"></i></button>
+      </form>
+      <p id="subscribeMsg" style="margin-top:16px;font-size:.88rem;color:rgba(255,255,255,.8);display:none;"></p>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="navbar-logo">
+            <span class="logo-icon">IEIA</span>
+            <span class="logo-divider" style="background:rgba(255,255,255,.15)"></span>
+            <span class="logo-mag">Exhi<span>Bits</span></span>
+          </div>
+          <p>The official e-magazine of the Indian Exhibition Industry Association — India's national apex body
+            representing the exhibitions industry.</p>
+          <p style="margin-top:12px;"><i class="fas fa-map-marker-alt"></i> PHD House, 4/2, August Kranti Marg, Siri
+            Institutional Area, New Delhi 110016</p>
+        </div>
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="https://www.ieia.in/about-us" target="_blank">About IEIA</a></li>
+            <li><a href="https://www.ieia.in/executive-committee" target="_blank">Executive Committee</a></li>
+            <li><a href="https://www.ieia.in/ieia-constitution" target="_blank">Constitution</a></li>
+            <li><a href="https://www.ieia.in/ethics" target="_blank">Code of Ethics</a></li>
+            <li><a href="https://www.ieia.in/lifetime-achievement-awards" target="_blank">Awards</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Resources</h5>
+          <ul>
+            <li><a href="https://www.ieia.in/news-activities" target="_blank">Industry News</a></li>
+            <li><a href="https://www.ieia.in/front/registration_form" target="_blank">Membership</a></li>
+            <li><a href="https://www.ieia.in/member" target="_blank">Member Login</a></li>
+            <li><a href="#subscribe">Subscribe</a></li>
+            <li><a href="https://www.ieia.in/" target="_blank">Main Website</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <ul>
+            <li><a href="tel:+911141045481">+91 11 41045481</a></li>
+            <li><a href="mailto:info@ieia.in">info@ieia.in</a></li>
+            <li><a href="https://www.ieia.in/front/privacy_policy" target="_blank">Privacy Policy</a></li>
+            <li><a href="https://www.ieia.in/front/terms_and_conditions" target="_blank">Terms & Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span id="footerYear">2026</span> IEIA — Indian Exhibition Industry Association. All rights
+          reserved.</span>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/IEIASecretariat/" target="_blank" aria-label="Facebook"><i
+              class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/IEIA_sec" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.linkedin.com/company/ieia/" target="_blank" aria-label="LinkedIn"><i
+              class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.youtube.com/@iaborede" target="_blank" aria-label="YouTube"><i
+              class="fab fa-youtube"></i></a>
+          <a href="https://www.instagram.com/ieia_secretariat/" target="_blank" aria-label="Instagram"><i
+              class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
