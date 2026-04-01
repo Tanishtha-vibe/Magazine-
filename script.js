@@ -131,6 +131,58 @@
     'IEIA EventTech & MarTech Summit 2026',
   ];
 
+  // ===== DATA: Newsletter Articles =====
+  const newsletterArticles = [
+    {
+      type: 'feature',
+      title: 'The Future of Exhibition Design: Immersive & AI-Powered Booths',
+      excerpt: 'How artificial intelligence and immersive technologies are reshaping booth design, visitor engagement, and ROI measurement at India\'s leading trade shows.',
+      date: '2026-03-25',
+      author: 'Priya Sharma',
+      link: 'https://www.ieia.in/news-activities'
+    },
+    {
+      type: 'interview',
+      title: 'In Conversation with IEIA Chairman on India\'s Exhibition Roadmap 2030',
+      excerpt: 'An exclusive interview covering India\'s ambitious plans to become a top-5 global exhibition market — new venues, policy support, and international collaborations.',
+      date: '2026-03-22',
+      author: 'Rajesh Kumar',
+      link: 'https://www.ieia.in/news-activities'
+    },
+    {
+      type: 'analysis',
+      title: 'Sustainability in MICE: Green Certifications Reshaping Venues',
+      excerpt: 'A deep-dive into how Indian convention centres are adopting LEED and IGBC certifications, and what this means for exhibitors and event organizers.',
+      date: '2026-03-18',
+      author: 'Anita Desai',
+      link: 'https://www.ieia.in/news-activities'
+    },
+    {
+      type: 'opinion',
+      title: 'Why Tier-2 Cities Are the Next Exhibition Powerhouses',
+      excerpt: 'With world-class infrastructure emerging in Lucknow, Indore, and Hyderabad, the exhibition industry is poised for a geographic revolution.',
+      date: '2026-03-14',
+      author: 'Vikram Mehta',
+      link: 'https://www.ieia.in/news-activities'
+    },
+    {
+      type: 'report',
+      title: 'IEIA Annual Industry Report: Exhibition Sector Grows 12% in FY26',
+      excerpt: 'Our comprehensive annual report reveals robust growth in exhibitor participation, venue bookings, and international partnerships across India.',
+      date: '2026-03-10',
+      author: 'IEIA Research',
+      link: 'https://www.ieia.in/news-activities'
+    },
+    {
+      type: 'feature',
+      title: 'Digital Twins & Virtual Exhibitions: Hybrid Event Strategies That Work',
+      excerpt: 'Case studies from leading Indian exhibitors who successfully blended physical and digital experiences to triple their visitor reach.',
+      date: '2026-03-06',
+      author: 'Sneha Patel',
+      link: 'https://www.ieia.in/news-activities'
+    }
+  ];
+
   // ===== HELPER: Format date =====
   function formatDate(dateStr) {
     const d = new Date(dateStr);
@@ -226,6 +278,35 @@
     track.innerHTML = partners.map(p => `
       <a href="${p.url}" target="_blank" class="partner-logo" title="${p.name}">${p.name}</a>
     `).join('');
+  }
+
+  // ===== RENDER: Newsletter =====
+  function renderNewsletter() {
+    const container = document.getElementById('newsletterFlex');
+    if (!container) return;
+
+    container.innerHTML = newsletterArticles.map((article, i) => {
+      const initials = article.author.split(' ').map(w => w[0]).join('');
+      return `
+        <div class="newsletter-card fade-in" style="transition-delay: ${i * .08}s">
+          <div class="newsletter-card-body">
+            <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px">
+              <span class="newsletter-card-badge type-${article.type}">${article.type}</span>
+              <span class="newsletter-card-date"><i class="far fa-calendar-alt"></i> ${timeAgo(article.date)}</span>
+            </div>
+            <h4 class="newsletter-card-title">${article.title}</h4>
+            <p class="newsletter-card-excerpt">${article.excerpt}</p>
+          </div>
+          <div class="newsletter-card-footer">
+            <div class="newsletter-card-author">
+              <span class="newsletter-card-author-avatar">${initials}</span>
+              ${article.author}
+            </div>
+            <a href="${article.link}" target="_blank" class="newsletter-card-readlink">Read</a>
+          </div>
+        </div>
+      `;
+    }).join('');
   }
 
   // ===== INTERSECTION OBSERVER: Fade-in on scroll =====
@@ -705,6 +786,7 @@
     renderTicker();
     renderInitiatives();
     renderPartners();
+    renderNewsletter();
     initNavbar();
     initHamburger();
     initSmoothScroll();
